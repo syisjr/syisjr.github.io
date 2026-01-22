@@ -1,2 +1,2 @@
 # homework教师端网页代码
-[主页](syisjr.github.io/index)
+[主页](https://syisjr.github.io/index)
