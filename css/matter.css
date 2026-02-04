@@ -1,0 +1,10 @@
+.info{
+    display: block;
+    font-size: 17px;
+    color: black;
+}
+.warning{
+    display: block;
+    font-size: 15px;
+    color: red;
+}

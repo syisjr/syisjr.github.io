@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--初始设置-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录系统</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/matter.css">
+  <script>
+    //清空用户类型数据
+    localStorage.setItem('usertype', 'none');
+    //定义函数
+    function gitPassword(){
+      let password=document.getElementById("login_password").value;
+      console.log("用户输入密码");
+      //验证密码
+      switch(password){
+        case "student":
+          console.info("学生密码正确，跳转到学生界面");
+          window.location.href="https://syisjr.github.io/student";
+          break;
+        case "teacher_abcdfe":
+          console.info("教师密码正确，跳转到教师界面");
+          window.location.href="https://syisjr.github.io/teacher";
+          break;
+        default:
+          console.info("密码错误")
+          document.getElementById("bad_password").innerHTML="密码错误，请重新输入";
+      }
+  }
+  </script>
+</head>
+
+<body>
+
+  <center><h1>登录系统</h1></center>
+  <p class="info">请输入密码</p>
+  <p style="color: red" id="bad_password" class="warning"></p>
+  <input type="password" id="login_password">
+  <button onclick="gitPassword()">登录</button>
+
+</body>
+
+</html>
